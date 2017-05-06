@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const dbURI = 'mongodb://localhost:27017/be-mean-instagram'
+const dbURI = 'mongodb://localhost:27017/truepower'
 
 mongoose.connect(dbURI);
 
