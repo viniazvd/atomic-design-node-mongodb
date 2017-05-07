@@ -2,7 +2,7 @@
 
 const mongoose = require('mongoose');
 const Molecule = require('./../molecules/user');
-const Organism = mongoose.model('user', Molecule);
+const Organism = mongoose.model('User', Molecule);
 
 const create = require('./organelles/create')(Organism);
 const find = require('./organelles/find')(Organism);
