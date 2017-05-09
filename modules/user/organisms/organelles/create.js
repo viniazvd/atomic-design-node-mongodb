@@ -1,6 +1,13 @@
 'use strict';
 
-module.exports = (Organism) => {
-  return (obj, callback) => Organism.create(obj, callback);
-};
+const success = ( res ) => ( result ) => res.json( result )
+const error = ( msg ) => ( err ) => console.log( msg, err )
 
+module.exports = ( Organism ) => 
+                 ( req, res ) => Organism.create( req.body )
+                                  .then( success( res ) )
+                                  .catch( error( 'Erro no create' ) )
+
+
+
+                                  

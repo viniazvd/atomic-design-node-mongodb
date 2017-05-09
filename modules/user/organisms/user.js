@@ -2,18 +2,18 @@
 
 const mongoose = require('mongoose');
 const Molecule = require('./../molecules/user');
-const Organism = mongoose.model('user', Molecule);
+const Organism = mongoose.model('User', Molecule);
 
 const create = require('./organelles/create')(Organism);
 const find = require('./organelles/find')(Organism);
-const findOne = require('./organelles/findOne')(Organism);
+const findById = require('./organelles/findById')(Organism);
 const update = require('./organelles/update')(Organism);
 const remove = require('./organelles/remove')(Organism);
 
 const Cell = {
   create,
   find,
-  findOne,
+  findById,
   update,
   remove
 };
